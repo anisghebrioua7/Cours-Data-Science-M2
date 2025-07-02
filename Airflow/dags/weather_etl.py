@@ -18,7 +18,7 @@ CSV_PATH = "/opt/airflow/data/weather_data.csv"
 @dag(
     dag_id="weather_etl",
     start_date=datetime(2025, 7, 2, tzinfo=pendulum.timezone("UTC")),
-    schedule="0 8 * * *",  # Tous les jours à 8h
+    schedule="0 8 * * *",  # Tous les jours à 8h du matin
     catchup=False,
     tags=["weather", "ETL", "open-meteo"]
 )
